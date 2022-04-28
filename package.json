@@ -3,6 +3,7 @@
     "tailwindcss": "^3.0.24"
   },
   "dependencies": {
+    "@lottiefiles/lottie-player": "^1.5.7",
     "gsap": "^3.10.4"
   }
 }
