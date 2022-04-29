@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <header class="fixed top-0 inset-x-0 py-6 z-20">
-        <div class="container flex justify-between items-center">
+    <header class="fixed top-0 inset-x-0 z-20">
+        <div class="container flex justify-between items-center relative py-6">
             <a href="index.html" id="logo">
                 <svg width="72" height="60" viewBox="0 0 72 60" fill="none" xmlns="http://www.w3.org/2000/svg"
                     class="sm:hidden">
@@ -33,7 +33,54 @@
                         fill="#FEC267" />
                 </svg>
             </a>
-            <button class="w-[60px] h-[60px] bg-[url('../img/menu.svg')]"></button>
+            <div>
+                <button class="w-[60px] h-[60px] bg-[url('../img/menu.svg')] transition-transform" id="menu-button"></button>
+                <div class="absolute top-0 inset-x-0 bg-black pt-32 lg:pt-96 px-8 pb-12 -z-10 hidden" id="menu">
+                    <div class="text-white [text-shadow:0px_10px_20px_#FEC267] mb-8 lg:mb-12 text-4xl font-bold">Discover</div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mb-10 lg:mb-44 gap-5 md:gap-7">
+                        <img src="../img/menu-logo-1.svg" alt="">
+                        <img src="../img/menu-logo-2.svg" alt="">
+                        <img src="../img/menu-logo-3.svg" alt="">
+                        <img src="../img/menu-logo-4.svg" alt="">
+                        <img src="../img/menu-logo-5.svg" alt="">
+                    </div>
+                    <div class="flex justify-between gap-5">
+                        <div class="flex-1 flex flex-col lg:flex-row lg:items-end justify-between gap-5">
+                            <div class="uppercase text-[#5A554F] [text-shadow:0px_5px_20px_#5A554F] md:text-xl lg:text-3xl">
+                                Legal
+                            </div>
+                            <ul class="text-[#D8D8D8] text-sm md:text-lg lg:text-xl space-y-2">
+                                <li><a href="#">Cookies Policy</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Term and Conditions</a></li>
+                                <li><a href="#">Legal Risk & Regulations</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-1 flex flex-col lg:flex-row lg:items-end gap-5">
+                            <div class="uppercase text-[#5A554F] [text-shadow:0px_5px_20px_#5A554F] md:text-xl lg:text-3xl">
+                                Support
+                            </div>
+                            <ul class="text-[#D8D8D8] text-sm md:text-lg lg:text-xl space-y-2">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Medium</a></li>
+                                <li><a href="#">Roadmap</a></li>
+                                <li><a href="#">Whitepaper v1.0</a></li>
+                            </ul>
+                        </div>
+                        <div class="flex-1 flex flex-col lg:flex-row lg:items-end gap-5">
+                            <div class="uppercase text-[#5A554F] [text-shadow:0px_5px_20px_#5A554F] md:text-xl lg:text-3xl">
+                                Contract
+                            </div>
+                            <ul class="text-[#D8D8D8] text-sm md:text-lg lg:text-xl space-y-2">
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#">Twitter</a></li>
+                                <li><a href="#">E-Mail</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="flex gap-3">
                 <button class="text-[#D8D8D8] border-[1.5px] border-[#D8D8D8] px-4 py-2 rounded-[5px]">Login</button>
                 <button

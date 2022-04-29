@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
+    var menu = document.querySelector('#menu');
+    var menu_button = document.querySelector('#menu-button');
+
+    menu_button.addEventListener('click', function (event) {
+        console.log(event);
+
+        menu.classList.toggle('hidden');
+        menu_button.classList.toggle('rotate-180');
+    });
+
     if (window.innerWidth >= 1280) {
         gsap.registerPlugin(ScrollTrigger);
 
