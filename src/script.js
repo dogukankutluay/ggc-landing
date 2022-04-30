@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             //     path.style.fill = '#FEC267';
             // });
 
-            
+
             menu_button.classList.add('-translate-y-24');
             button_login.classList.add('-translate-y-24');
             button_sign_up.classList.add('-translate-y-24');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             //     path.style.fill = null;
             // });
 
-           
+
             menu_button.classList.remove('-translate-y-24');
             button_login.classList.remove('-translate-y-24');
             button_sign_up.classList.remove('-translate-y-24');
@@ -144,4 +144,16 @@ document.addEventListener('DOMContentLoaded', function () {
         //     ease: 'none'
         // });
     }
+
+    var faq_buttons = document.querySelectorAll('#faq button');
+
+    faq_buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            faq_buttons.forEach(function (button) {
+                button.querySelector('.yellow-line').classList.add('after:hidden');
+            });
+
+            this.querySelector('.yellow-line').classList.remove('after:hidden');
+        });
+    });
 });
