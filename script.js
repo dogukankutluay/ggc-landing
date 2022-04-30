@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
         gsap.to('#logo path', {
             scrollTrigger: {
                 trigger: '#s-2',
-                markers: true,
+                // markers: true,
                 start: 'top top',
                 toggleActions: 'play pause resume reverse',
             },
