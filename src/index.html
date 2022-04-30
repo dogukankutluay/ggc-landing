@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header class="fixed top-0 inset-x-0 z-20">
+    <header class="fixed top-0 inset-x-0 z-20 transition">
         <div class="container flex justify-between items-center relative py-6">
             <a href="index.html" id="logo">
                 <svg width="72" height="60" viewBox="0 0 72 60" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -82,10 +82,8 @@
                 </div>
             </div>
             <div class="flex gap-3">
-                <button class="text-[#D8D8D8] border-[1.5px] border-[#D8D8D8] px-4 py-2 rounded-[5px]">Login</button>
-                <button
-                    class="bg-[#FEC267] border-[3px] border-[#FEC267] rounded-[5px] px-4 py-2 text-[#4B4743] text-[0.9375rem] hidden sm:block">Sign
-                    up</button>
+                <button class="text-[#D8D8D8] border-[1.5px] border-[#D8D8D8] px-4 py-2 rounded-[5px]" id="button-login">Login</button>
+                <button class="bg-[#FEC267] border-[3px] border-[#FEC267] rounded-[5px] px-4 py-2 text-[#4B4743] text-[0.9375rem] hidden sm:block" id="button-sign-up">Sign up</button>
             </div>
         </div>
     </header>
@@ -94,7 +92,8 @@
             class="absolute inset-0 w-full h-full object-cover"></video>
         <div class="container h-full relative">
             <div
-                class="absolute left-1/2 xl:left-auto -translate-x-1/2 xl:-translate-x-0 top-1/2 -translate-y-1/2 xl:right-0 w-[300px] xl:w-[400px] h-[330px] xl:h-[400px] bg-[rgba(90,85,79,0.2)] rounded-[1.25rem]">
+                class="absolute left-1/2 xl:left-auto -translate-x-1/2 xl:-translate-x-0 top-1/2 -translate-y-1/2 xl:right-40 w-[300px] xl:w-[400px] h-[330px] xl:h-[400px] bg-[rgba(90,85,79,0.2)] rounded-[1.25rem]">
+                <img src="../img/coin.png" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 max-w-full max-h-full">
                 <div
                     class="text-[#FEC267] text-3xl font-bold absolute top-0 -translate-y-full -mt-3 left-2/3 side hidden sm:block">
                     <div class="flex text-white gap-3 items-center mb-1">
@@ -458,7 +457,7 @@
                         public, so that more and more people can earn some profits from the current cryptocurrency boom.
                         Renting GGC NFT will allow you to profit from the mining shares. How? GGC's 70% mining proceeds
                         will be split into shares and issued as rental NFTs.</p>
-                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                    <div class="flex flex-col xl:flex-row xl:items-center sm:justify-between gap-4">
                         <div>
                             Check out Litepaper
                         </div>
@@ -476,7 +475,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="sm:flex-1 hidden"></div>
+                <div class="hidden lg:block flex-1"></div>
             </div>
             <div class="hidden xl:flex items-center gap-2 text-[#5A554F] absolute bottom-0 left-0">
                 <img src="../img/scroll.svg" alt="scroll">

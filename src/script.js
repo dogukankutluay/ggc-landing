@@ -1,6 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
+    var header = document.querySelector('header');
+
     var menu = document.querySelector('#menu');
     var menu_button = document.querySelector('#menu-button');
+
+    var button_login = document.querySelector('#button-login');
+    var button_sign_up = document.querySelector('#button-sign-up');
+
+    var last_scroll_top = 0;
+
+    var logo_color = null;
+
+    document.addEventListener('scroll', function () {
+        var active_scroll_top = this.documentElement.scrollTop;
+
+        if (last_scroll_top < active_scroll_top || active_scroll_top < 100) {
+            header.classList.remove('bg-black');
+            header.classList.remove('dark');
+
+            // document.querySelectorAll('#logo path').forEach(function (path) {
+            //     logo_color = path.style.fill;
+
+            //     path.style.fill = '#FEC267';
+            // });
+
+            
+            menu_button.classList.add('-translate-y-24');
+            button_login.classList.add('-translate-y-24');
+            button_sign_up.classList.add('-translate-y-24');
+        } else {
+            header.classList.add('bg-black');
+            header.classList.add('dark');
+
+            // document.querySelectorAll('#logo path').forEach(function (path) {
+            //     if (logo_color) {
+            //         path.style.fill = logo_color;
+
+            //         return;
+            //     }
+
+            //     path.style.fill = null;
+            // });
+
+           
+            menu_button.classList.remove('-translate-y-24');
+            button_login.classList.remove('-translate-y-24');
+            button_sign_up.classList.remove('-translate-y-24');
+        }
+
+        last_scroll_top = active_scroll_top;
+    });
 
     menu_button.addEventListener('click', function (event) {
         console.log(event);
@@ -40,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.to('#logo path', {
             scrollTrigger: {
                 trigger: '#s-2',
-                // markers: true,
+                markers: true,
                 start: 'top top',
                 toggleActions: 'play pause resume reverse',
             },
