@@ -131,18 +131,20 @@ document.addEventListener('DOMContentLoaded', function () {
             // .to('#s-2', { background: '#020202' }, '<')
             ;
 
-        // gsap.to('#wheel-1 > div', {
-        //     // repeat: -1,
-        //     xPercent: '+100',
-        //     duration: 5,
-        //     // modifiers: {
-        //     //     xPercent: gsap.utils.unitize(function (xPercent) {
-        //     //         console.log(xPercent);
-        //     //         return xPercent % 100;
-        //     //     })
-        //     // },
-        //     ease: 'none'
-        // });
+        gsap.to('#wheel-1 > div', {
+            xPercent: '+100',
+            duration: 10,
+            ease: 'none',
+            repeat: -1
+        });
+
+
+        gsap.to('#wheel-2 > div', {
+            xPercent: '+100',
+            duration: 10,
+            ease: 'none',
+            repeat: -1
+        });
     }
 
     var faq_buttons = document.querySelectorAll('#faq button');
