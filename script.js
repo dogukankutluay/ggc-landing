@@ -61,60 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     last_scroll_top = active_scroll_top;
 
     //animations
-    const offset = active_scroll_top + 170;
-    const s1 = document.getElementById('s-1').offsetTop;
-    const s2 = (document.elemRect = document
-      .getElementById('s-2')
-      .getBoundingClientRect()).height;
-    const s3 = document.getElementById('s-3').getBoundingClientRect().height;
-    const s4 = document.getElementById('s-4').offsetTop;
-    const s5 = document.getElementById('s-5').offsetTop;
-    const s6 = document.getElementById('s-6').offsetTop;
-    const s7 = document.getElementById('s-7').offsetTop;
-    const footer = document.getElementById('footer').offsetTop;
-    if (offset >= s1 && offset < s2) {
-      console.log('s1');
-      let outs = document.getElementsByClassName('s1-out');
-      let outRights = document.getElementsByClassName('s1-out-right');
-      for (let index = 0; index < outs.length; index++) {
-        outs[index].classList.add('animate__animated', 'animate__fadeOut');
-      }
-
-      for (let index = 0; index < outs.length; index++) {
-        outRights[index].classList.add(
-          'animate__animated',
-          'animate__fadeOutRight'
-        );
-      }
-    }
-    if (offset + 100 >= s3 && offset < s4) {
-      document
-        .getElementById('progressbar')
-        .classList.add('animate__animated', 'animate__fadeInLeft');
-      let elements = document.getElementsByClassName('box');
-      for (var i = 0; i < elements.length; i++) {
-        elements[i].classList.add('animate__animated', 'animate__fadeInLeft');
-      }
-      document
-        .getElementById('pointer-container')
-        .classList.add('animate__animated', 'animate__fadeInDown');
-    }
-    if (offset >= s4 && offset < s5) {
-      console.log('s4');
-    }
-    if (offset >= s6 && offset < s7) {
-      const elements = document.getElementsByClassName('s6-content');
-      for (var i = 0; i < elements.length; i++) {
-        elements[i].classList.add('animate__animated', 'animate__fadeInUp');
-      }
-    }
-
-    if (offset + 600 > footer) {
-      document
-        .getElementById('footer-content')
-        .classList.add('animate__animated', 'animate__fadeInUp');
-      header.classList.add('dark');
-    }
+    handleAnimations(active_scroll_top);
   });
 
   menu_button.addEventListener('click', function (event) {
@@ -214,12 +161,12 @@ document.addEventListener('DOMContentLoaded', function () {
       ease: 'none',
       repeat: -1,
     });
-    gsap.to('#wheel-3 > div', {
-      yPercent: '+500',
-      duration: 5,
-      ease: 'none',
-      repeat: -1,
-    });
+    //   gsap.to('#wheel-3 > img', {
+    //     yPercent: '+500',
+    //     duration: 5,
+    //     ease: 'none',
+    //     repeat: -1,
+    //   });
   }
 
   var faq_buttons = document.querySelectorAll('#faq button');
@@ -235,7 +182,149 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+//handling loading screen
 window.addEventListener('load', function () {
   document.getElementById('page').classList.remove('hidden');
   document.getElementById('loading').classList.add('hidden');
 });
+
+//handling animations
+
+function handleAnimations(active_scroll_top) {
+  const offset = active_scroll_top + 170;
+  //sections
+  const s1 = document.getElementById('s-1').offsetTop;
+  const s2 = (document.elemRect = document
+    .getElementById('s-2')
+    .getBoundingClientRect()).height;
+  const s3 = document.getElementById('s-3').getBoundingClientRect().height;
+  const s4 = document.getElementById('s-4').offsetTop;
+  const s5 = document.getElementById('s-5').offsetTop;
+  const s6 = document.getElementById('s-6').offsetTop;
+  const s7 = document.getElementById('s-7').offsetTop;
+  //gsap texts
+  const text1 = document
+    .getElementById('text-1')
+    .getBoundingClientRect().height;
+  const text2 = document
+    .getElementById('text-2')
+    .getBoundingClientRect().height;
+  const text3 = document
+    .getElementById('text-3')
+    .getBoundingClientRect().height;
+  const text4 = document
+    .getElementById('text-4')
+    .getBoundingClientRect().height;
+  //text 1 animations
+  if (text1 > 0 && offset > text1) {
+    document
+      .getElementById('text-1')
+      .classList.add('animate__animated', 'animate__fadeInUp');
+
+    document
+      .getElementById('text-1-right')
+      .classList.add('animate__animated', 'animate__fadeInRight');
+  } else {
+    document
+      .getElementById('text-1-right')
+      .classList.remove('animate__animated', 'animate__fadeInRight');
+    document
+      .getElementById('text-1')
+      .classList.add('animate__animated', 'animate__fadeInUp');
+  }
+  //text-2 animations
+  if (text2 > 0) {
+    document
+      .getElementById('text-2')
+      .classList.add('animate__animated', 'animate__fadeInUp');
+    document
+      .getElementById('text-2-right')
+      .classList.add('animate__animated', 'animate__fadeInRight');
+  } else {
+    document
+      .getElementById('text-2')
+      .classList.remove('animate__animated', 'animate__fadeInUp');
+    document
+      .getElementById('text-2-right')
+      .classList.remove('animate__animated', 'animate__fadeInRight');
+  }
+  //text-3 animations
+  if (text3 > 0) {
+    document
+      .getElementById('text-3')
+      .classList.add('animate__animated', 'animate__fadeInUp');
+    document
+      .getElementById('text-3-right')
+      .classList.add('animate__animated', 'animate__fadeInRight');
+  } else {
+    document
+      .getElementById('text-3')
+      .classList.remove('animate__animated', 'animate__fadeInUp');
+    document
+      .getElementById('text-3-right')
+      .classList.remove('animate__animated', 'animate__fadeInRight');
+  }
+  //text-4 animations
+  if (text4 > 0) {
+    document
+      .getElementById('text-4')
+      .classList.add('animate__animated', 'animate__fadeInUp');
+    document
+      .getElementById('text-4-right')
+      .classList.add('animate__animated', 'animate__fadeInRight');
+  } else {
+    document
+      .getElementById('text-4')
+      .classList.remove('animate__animated', 'animate__fadeInUp');
+    document
+      .getElementById('text-4-right')
+      .classList.remove('animate__animated', 'animate__fadeInRight');
+  }
+  //section animations
+  const footer = document.getElementById('footer').offsetTop;
+  //section 1
+  if (offset >= s1 && offset < s2) {
+    let outs = document.getElementsByClassName('s1-out');
+    let outRights = document.getElementsByClassName('s1-out-right');
+    for (let index = 0; index < outs.length; index++) {
+      outs[index].classList.add('animate__animated', 'animate__fadeOut');
+    }
+
+    for (let index = 0; index < outRights.length; index++) {
+      outRights[index].classList.add(
+        'animate__animated',
+        'animate__fadeOutRight'
+      );
+    }
+  }
+  //section 3
+  if (offset + 100 >= s3 && offset < s4) {
+    document
+      .getElementById('progressbar')
+      .classList.add('animate__animated', 'animate__fadeInLeft');
+    let elements = document.getElementsByClassName('box');
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].classList.add('animate__animated', 'animate__fadeInLeft');
+    }
+    document
+      .getElementById('pointer-container')
+      .classList.add('animate__animated', 'animate__fadeInDown');
+  }
+  //section 4
+  if (offset >= s4 && offset < s5) {
+  }
+  //section 6
+  if (offset >= s6 && offset < s7) {
+    const elements = document.getElementsByClassName('s6-content');
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].classList.add('animate__animated', 'animate__fadeInUp');
+    }
+  }
+  //footer
+  if (offset + 600 > footer) {
+    document
+      .getElementById('footer-content')
+      .classList.add('animate__animated', 'animate__fadeInUp');
+    header.classList.add('dark');
+  }
+}
