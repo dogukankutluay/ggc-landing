@@ -19,32 +19,34 @@
       html,
       body {
         scroll-behavior: smooth;
+        overflow-x: hidden;
       }
     </style>
   </head>
 
   <body>
-    <div
-      class="w-100 h-screen flex justify-center flex-col items-center bg-[#1C1C1C]"
-      id="loading"
-      style="overflow: hidden"
+    
+    <!-- <div
+    class="w-100 h-screen flex justify-center flex-col items-center bg-[#1C1C1C]"
+    id="loading"
+    style="overflow: hidden"
+  >
+    <lottie-player
+      src="https://assets10.lottiefiles.com/packages/lf20_sgvdi18h.json"
+      background="transparent"
+      speed="1"
+      style="max-height: 250px"
+      class="w-1/2 aspect-square animate__animated animate__fadeIn"
+      loop
+      autoplay
+    ></lottie-player>
+    <h1
+      class="text-4xl md:text-3xl lg:text-4xl text-[#ffffff] mt-5 text-center animate__animated animate__fadeIn"
     >
-      <lottie-player
-        src="https://assets10.lottiefiles.com/packages/lf20_sgvdi18h.json"
-        background="transparent"
-        speed="1"
-        style="max-height: 250px"
-        class="w-1/2 aspect-square animate__animated animate__fadeIn"
-        loop
-        autoplay
-      ></lottie-player>
-      <h1
-        class="text-4xl md:text-3xl lg:text-4xl text-[#ffffff] mt-5 text-center animate__animated animate__fadeIn"
-      >
-        We’ve prepared something great for you...
-      </h1>
-    </div>
-    <div id="page" class="hidden">
+      We’ve prepared something great for you...
+    </h1>
+  </div> -->
+  <!-- <div id="page" class="hidden"> -->
       <header class="fixed top-0 inset-x-0 z-20 transition">
         <div class="container flex justify-between items-center relative py-6">
           <a href="index.html" id="logo">
@@ -611,7 +613,7 @@
                     <div
                       class="bg-[#E8E8E8] text-[#5A554F] rounded-[1.25rem] shadow-[0px_10px_20px_#FEC267] pt-6 sm:pt-12 pr-3 sm:pr-5 pb-3 sm:pb-6 pl-5 sm:pl-7"
                     >
-                      <a
+                      <!-- <a
                         href="#watch"
                         class="inline-block pt-16 hover:drop-shadow-[0px_10px_20px_#FEC267]"
                       >
@@ -633,7 +635,7 @@
 
                           Watch Video
                         </button>
-                      </a>
+                      </a> -->
                       <h2 class="mb-7 text-xl sm:text-3xl font-bold">
                         GGCM holds
                         <span class="text-[#FEC267]">the gold</span> for you!
@@ -902,7 +904,7 @@
             <img src="img/arrow.svg" alt="" />
           </div>
         </div>
-        <div
+        <!-- <div
           class="hidden xl:block absolute left-1/2 -translate-x-1/2 inset-y-0 aspect-square -rotate-90 text-8xl whitespace-nowrap overflow-hidden"
           id="wheel-1"
         >
@@ -934,7 +936,7 @@
               <img src="img/arrow.svg" alt="" />
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
       <section class="py-12 xl:py-36 bg-[#020202] text-white" id="s-5">
         <div class="container">
@@ -1323,6 +1325,6 @@
           <div>Made with <span class="text-[#FEC267]">KAF</span></div>
         </div>
       </footer>
-    </div>
+      <!-- </div> -->
   </body>
 </html>

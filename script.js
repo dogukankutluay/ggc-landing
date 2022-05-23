@@ -183,10 +183,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //handling loading screen
-window.addEventListener('load', function () {
-  document.getElementById('page').classList.remove('hidden');
-  document.getElementById('loading').classList.add('hidden');
-});
+// window.addEventListener('load', function () {
+//   // document.getElementById('page').classList.remove('hidden');
+//   document.getElementById('loading').classList.add('hidden');
+// });
 
 //handling animations
 
@@ -220,7 +220,6 @@ function handleAnimations(active_scroll_top) {
     document
       .getElementById('text-1')
       .classList.add('animate__animated', 'animate__fadeInUp');
-
     document
       .getElementById('text-1-right')
       .classList.add('animate__animated', 'animate__fadeInRight');
@@ -289,7 +288,6 @@ function handleAnimations(active_scroll_top) {
     for (let index = 0; index < outs.length; index++) {
       outs[index].classList.add('animate__animated', 'animate__fadeOut');
     }
-
     for (let index = 0; index < outRights.length; index++) {
       outRights[index].classList.add(
         'animate__animated',
