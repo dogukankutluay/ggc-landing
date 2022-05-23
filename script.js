@@ -183,10 +183,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 //handling loading screen
-// window.addEventListener('load', function () {
-//   // document.getElementById('page').classList.remove('hidden');
-//   document.getElementById('loading').classList.add('hidden');
-// });
+window.addEventListener('load', function () {
+  document.getElementById('loading').style.display = 'none';
+});
 
 //handling animations
 
