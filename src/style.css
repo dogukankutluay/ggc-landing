@@ -1,0 +1,78 @@
+.fix-watch {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.fix-btn-group {
+    margin-bottom: 50px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    max-width: 1138px !important;
+    width: 100% !important;
+}
+
+.fix-btn {
+    color: rgb(254, 194, 103) !important;
+    border: 3px solid rgb(254, 194, 103) !important;
+    border-radius: 4px !important;
+    width: 100% !important;
+    padding: 15px 0 !important;
+    transition: all ease 0.3s !important;
+}
+
+.fix-btn:hover {
+    background-color: rgb(254, 194, 103) !important;
+    color: #000 !important;
+}
+
+.fix-btn:first-child {
+    margin-right: 25px !important;
+}
+
+.fix-btn:last-child {
+    margin-left: 25px !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .fix-text-white {
+        top: 110px !important;
+        font-size: 1.5rem !important;
+    }
+
+    .fix-arrow-svg {
+        width: 70px !important;
+        padding: 10px !important;
+        margin-top: -18px !important;
+    }
+
+    .fix-coin {
+        left: 56px !important;
+        width: 220px !important;
+        height: 220px !important;
+    }
+
+    .fix-coin img {
+        height: 190px !important;
+        width: 190px !important;
+    }
+
+    .fix-btn-group {
+        margin-bottom: 50px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .fix-btn:first-child {
+        margin-bottom: 25px !important;
+        margin-right: 0 !important;
+    }
+    
+    .fix-btn:last-child {
+        margin-top: 25px !important;
+        margin-left: 0 !important;
+    }
+}
